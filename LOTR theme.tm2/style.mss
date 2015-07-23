@@ -64,8 +64,6 @@
 
 #place_label[type='city'] [zoom>4][zoom<=14] {
   marker-file:url("ring.png");
-  //point-file-ha
-  //point-comp-op: src-atop;
   text-dy: 2;
   text-dx: 2;
   text-name: @name ;
@@ -228,26 +226,11 @@
 Map {
   background-color:@land;
   background-image: url("land.png");
-  //background-repeat:
-  //background-image-comp-op: dst-out;
   font-directory: url("font/"); 
  
   
 }
 
-
-
-// Political boundaries //
-
-
-// Water Features //
-/*#ne_110m_coastline {
-  line-color: #000000 ;
-  line-width: 4;
-  //line-pattern-file:url("mario.png");
-  //line-pattern-offset: 0;
-  //line-pattern-clip: 0;
-}*/
 
 
 @water_line:lighten(@water,8);
@@ -285,10 +268,9 @@ Map {
 
 #world_peaks 
   [zoom>=5]{
-  marker-file:url("hill copy.png");
-  //marker-comp-op:dst-out;
-  
-  }
+  marker-file:url("hill.png");
+
+ }
 
     
   
@@ -330,7 +312,7 @@ Map {
   ::main[zoom>=0] {
     comp-op:multiply;
     [class='park']{
-      polygon-pattern-file:url("shell12.png");
+      polygon-pattern-file:url("shell.png");
       
       
     }
@@ -357,36 +339,6 @@ Map {
 }
 
 
-// Roads & Railways //
-
-/*#tunnel { opacity: 0.5; }
-
-#road,
-#tunnel,
-#bridge {
-  ['mapnik::geometry_type'=2] {
-    line-width: 1;
-    line-color:#edc;
-    line-comp-op:multiply;
-    [class='motorway'],
-    [class='main'],
-    [class='motorway_link']{
-      line-color:#dba;
-      [zoom>=10] { line-width: 1; }
-      [zoom>=12] { line-width: 2; }
-      [zoom>=14] { line-width: 3; }
-      [zoom>=16] { line-width: 5; }
-    }
-    [class='street'],
-    [class='street_limited'] {
-      [zoom>=13] { line-width: 1.4; }
-      [zoom>=14] { line-width: 2; }
-      [zoom>=16] { line-width: 3; }
-    }
-    [class='street_limited'] { line-dasharray: 4,1; }
-    [class='path'] { line-dasharray: 3,2; }
-  }
-}*/
 #ne_10m_coastline [zoom>4] [zoom<=10]{
   line-width:2;
   [zoom=5]{line-width:1}

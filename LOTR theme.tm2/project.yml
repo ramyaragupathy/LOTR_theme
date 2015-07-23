@@ -48,5 +48,4 @@ name: LOTR Theme Map
 source: "mapbox:///mapbox.mapbox-streets-v4,pratikyadav.ef579a16,pratikyadav.c875cc85,pratikyadav.b579be39"
 styles: 
   - style.mss
-  - labels.mss
 template: ''
